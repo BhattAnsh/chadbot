@@ -2,6 +2,7 @@ import discord
 from discord import app_commands
 from discord.ext import commands
 
+
 class Admin(commands.Cog):
     def __init__(self, bot):
         self.bot = bot
@@ -24,6 +25,7 @@ class Admin(commands.Cog):
     async def ban(self, interaction: discord.Interaction, member: discord.Member, reason: str = None):
         await member.ban(reason=reason)
         await interaction.response.send_message(f'{member} has been banned. Reason: {reason}', ephemeral=True)
+
 
 async def setup(bot):
     await bot.add_cog(Admin(bot))

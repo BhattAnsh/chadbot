@@ -21,7 +21,8 @@ class Bot(commands.Bot):
             'cogs.moderation',
             'cogs.utility',
             'cogs.github',
-            'cogs.news'
+            'cogs.news',
+            'cogs.docs',
 
         ]
 
