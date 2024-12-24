@@ -19,7 +19,10 @@ class Bot(commands.Bot):
             'cogs.admin',
             'cogs.fun',
             'cogs.moderation',
-            'cogs.utility'
+            'cogs.utility',
+            'cogs.github',
+            'cogs.news'
+
         ]
 
     async def setup_hook(self):
@@ -30,7 +33,7 @@ class Bot(commands.Bot):
                 print(f"Loaded extension {ext}")
             except Exception as e:
                 print(f"Failed to load extension {ext}: {e}")
-        
+
         print("Syncing commands...")
         try:
             synced = await self.tree.sync()
