@@ -23,6 +23,7 @@ class Bot(commands.Bot):
             'cogs.github',
             'cogs.news',
             'cogs.docs',
+            'cogs.youtube',
 
         ]
 
